@@ -1,5 +1,9 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.btn');
+const successSound = document.getElementById('successSound');
+const subscribeBtn = document.getElementById('subscribeBtn');
+const emailInput = document.getElementById('email');
+
 let currentInput = '';
 let operator = '';
 let operand1 = null;
@@ -24,6 +28,7 @@ buttons.forEach(btn => {
         currentInput = '';
         operator = '';
         operand1 = null;
+        successSound.play();
       }
     } else if (btn.classList.contains('clear')) {
       display.value = '';
@@ -46,3 +51,13 @@ function calculate(op1, op2, operator) {
     default: return op2;
   }
 }
+
+subscribeBtn.addEventListener('click', () => {
+  const email = emailInput.value.trim();
+  if (email) {
+    alert(`Obrigado! Email ${email} cadastrado com sucesso!`);
+    emailInput.value = '';
+  } else {
+    alert('Por favor, insira um email válido.');
+  }
+});

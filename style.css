@@ -4,6 +4,13 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .calculator {
@@ -15,13 +22,15 @@ body {
 
 #display {
   width: 100%;
-  height: 50px;
-  font-size: 24px;
+  height: 60px;
+  font-size: 28px;
   margin-bottom: 10px;
   text-align: right;
   padding: 10px;
   border: none;
   border-radius: 5px;
+  background: #222;
+  color: #0f0; /* Verde vivo */
 }
 
 .buttons {
@@ -69,4 +78,39 @@ body {
 
 .clear:hover {
   background: #f44336;
+}
+
+.newsletter {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 250px;
+}
+
+.newsletter h2 {
+  margin-top: 0;
+}
+
+#email {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#subscribeBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #2196f3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#subscribeBtn:hover {
+  background: #42a5f5;
 }

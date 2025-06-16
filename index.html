@@ -2,36 +2,46 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculadora Simples</title>
+  <title>Calculadora Avançada</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" id="display" disabled />
-    <div class="buttons">
-      <button class="btn" data-value="7">7</button>
-      <button class="btn" data-value="8">8</button>
-      <button class="btn" data-value="9">9</button>
-      <button class="btn operator" data-value="/">÷</button>
+  <div class="container">
+    <div class="calculator">
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="/">÷</button>
 
-      <button class="btn" data-value="4">4</button>
-      <button class="btn" data-value="5">5</button>
-      <button class="btn" data-value="6">6</button>
-      <button class="btn operator" data-value="*">×</button>
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operator" data-value="*">×</button>
 
-      <button class="btn" data-value="1">1</button>
-      <button class="btn" data-value="2">2</button>
-      <button class="btn" data-value="3">3</button>
-      <button class="btn operator" data-value="-">−</button>
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="-">−</button>
 
-      <button class="btn" data-value="0">0</button>
-      <button class="btn" data-value=".">.</button>
-      <button class="btn equal">=</button>
-      <button class="btn operator" data-value="+">+</button>
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn equal">=</button>
+        <button class="btn operator" data-value="+">+</button>
 
-      <button class="btn clear">C</button>
+        <button class="btn clear">C</button>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <h2>Receba Novidades!</h2>
+      <input type="email" id="email" placeholder="Seu email">
+      <button id="subscribeBtn">Cadastrar Email</button>
     </div>
   </div>
+
+  <audio id="successSound" src="sounds/success.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
