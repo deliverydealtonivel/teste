@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resultado IMC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Resultado do IMC</h1>
+  <p id="resultadoIMC"></p>
+  <p id="diagnostico"></p>
+  <button onclick="voltar()">Voltar</button>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const imc = parseFloat(urlParams.get('imc'));
+
+    document.getElementById('resultadoIMC').innerText = `Seu IMC é: ${imc.toFixed(2)}`;
+
+    let diagnostico = '';
+    if (imc < 18.5) diagnostico = 'Você está magro.';
+    else if (imc < 25) diagnostico = 'Seu peso está normal.';
+    else if (imc < 30) diagnostico = 'Você está com sobrepeso.';
+    else diagnostico = 'Você está obeso.';
+
+    document.getElementById('diagnostico').innerText = diagnostico;
+
+    function voltar() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
